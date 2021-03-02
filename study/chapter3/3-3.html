@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header {color: red;}
+        #name {color: greenyellow;}
+        .select {color: orange;}
+        #list .select {color: violet;}
+        #list #select_second {color: blue;}
+        #hi {color: thistle;}
+        #mail {color: palegoldenrod;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Hello</h1>
+    </div>
+    <h1 class="select">Hello</h1>
+    <div id="name">
+        <p>이름 : <input id="name" type="text" /></p>
+    </div>
+    <ul id="list">
+        <li class="select">Hi</li>
+        <li id="select_second">Hi</li>
+        <li class="select">Hi</li>
+    </ul>
+    <div id="mail" >
+        <p>메일 : <input id="mail" type="text" placeholder="메일을 입력하세요"></p>
+    </div>   
+    <div id="hi">
+        <h1>hi</h1>
+    </div>
+</body>
+</html>

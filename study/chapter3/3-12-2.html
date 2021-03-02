@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {counter-increment: rint;}
+        p::before {content: counter(rint) ".";}
+        p::after {content: " - " attr(data-page);}
+        p::first-letter {font-size: 3em;}
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <p data-page="52">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque ipsa iure aliquid, adipisci itaque ut ipsum neque enim debitis. Nihil sit esse iusto doloremque modi, tempora cupiditate suscipit placeat porro.</p>
+    <p data-page="273">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ducimus vero sapiente reiciendis corporis consectetur eius id. Illum quae iusto ipsa sequi similique, officiis nostrum voluptatibus facere labore, qui cum.</p>
+</body>
+</html>
