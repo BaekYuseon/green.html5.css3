@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPage</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border: 0; }
+
+        #main_header {
+            width: 960px;
+            margin: 0 auto;
+            height: 160px;
+            position: relative;
+        }
+
+        #title {
+            position: absolute;
+            left: 20px; top: 30px;
+            font-family: 'Indie Flower', cursive;
+        }
+
+        #main_gnb {
+            position: absolute;
+            right: 0; top: 0;
+            font-family: 'Caveat', cursive;
+        }
+
+        #main_lnb {
+            position: absolute;
+            right: 0; bottom: 10px;
+            font-family: 'Caveat', cursive;
+        }
+
+        #main_gnb > ul { overflow: hidden; }
+        #main_gnb > ul > li { float: left; }
+        #main_gnb > ul > li > a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid black;
+        }
+        #main_gnb > ul > li > a:hover {
+            background: black;
+            color: white;
+        }
+        #main_gnb > ul > li:first-child > a {
+            border-radius: 10px 0 0 10px;
+        }
+        #main_gnb > ul > li:last-child > a {
+            border-radius: 0 10px 10px 0;
+        }
+
+        #main_lnb > ul { overflow: hidden; }
+        #main_lnb > ul > li { float: left; }
+        #main_lnb > ul > li > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+        #main_lnb > ul > li > a:hover {
+        background: black;
+        color: white;
+        }
+        #main_lnb > ul > li:first-child > a {
+            border-radius: 10px 0 0 10px;
+        }
+        #main_lnb > ul > li:last-child > a {
+            border-radius: 0 10px 10px 0;
+        }
+
+        #content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        #main_section {
+            width: 750px;
+            float: right;
+        }
+        #main_aside {
+            width: 200px;
+            float: left;
+            font-family: 'Indie Flower', cursive;
+        }
+
+        #main_section > article.main_article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid cornflowerblue;
+            font-family: 'Architects Daughter', cursive;
+        }   
+
+        input:nth-of-type(1) {display: none;}
+        input:nth-of-type(1) ~ div:nth-of-type(1) {display: none;}
+        input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
+
+        input:nth-of-type(2) {display: none;}
+        input:nth-of-type(2) ~ div:nth-of-type(2) {display: none;}
+        input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
+
+        section.buttons { overflow: hidden; }
+        section.buttons > label {
+            display: block; float: left;
+            width: 100px; height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid orange;
+            background: orange;
+            color: yellow;
+        }
+        input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1) { 
+            background: yellow;
+            color: orange;
+        }
+        input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) { 
+            background: yellow;
+            color: orange;
+        }
+        
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            border: 1px solid rgb(217, 255, 0);
+            border-top: none;
+            font-family: 'Caveat', cursive;
+        }
+
+        .thumbnail {
+            float: left;
+        }
+
+        .description {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .description > strong {
+            display: block;
+            width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #aside_nav {
+            position: absolute;
+            width: 200px;
+            margin-top: 10px;
+            font-family: 'Caveat', cursive;
+            text-align: center;
+            }
+
+        #aside_nav > ul > li > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black; 
+        }
+
+        #aside_nav > ul > li > a:hover {
+            background: orangered;
+            color: orange;
+        }
+        #aside_nav > ul > li:first-child > a {
+            border-radius: 10px 10px 0 0;
+        }
+        #aside_nav > ul > li:last-child > a {
+            border-radius: 0 0 10px 10px;
+        }
+
+        #main_footer {
+            width: 960px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>Rint Development</h1>
+            <p>HTML5 + CSS3 Basic</p>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">Simulation</a></li>
+                <li><a href="#">Data</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1>Main article</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, illo vero dolore soluta ipsum amet atque officiis minima saepe in ex placeat sit ab molestias! Ut maxime itaque dignissimos aut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam est, praesentium quisquam reprehenderit rem inventore cum quasi eos tempore expedita animi beatae asperiores corrupti sapiente veniam facilis laborum perspiciatis ad.
+                </p>
+            </article>
+            <article class="main_article">
+                <h1>Main article</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor adipisci laboriosam voluptatum eligendi quo dolorum labore iure repudiandae dolores, magni esse commodi architecto accusantium a veniam vero officiis optio magnam.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil hic blanditiis consequatur, officiis sed, incidunt architecto dolores iusto, et doloribus rem itaque nisi quidem nobis vel labore deleniti. Illo, iste.
+                </p>
+            </article>
+            <article class="main_article">
+                <h1>Main article</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias mollitia, ipsam beatae eos sapiente ipsum id voluptatem minima recusandae in, molestias tempore ratione voluptatum. Consectetur ad ab itaque soluta debitis!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates numquam quos consectetur incidunt veritatis aperiam! Fugiat excepturi dicta, vero ipsa quae esse minus, dignissimos officiis ipsam animi repellat magnam obcaecati?
+                </p>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input id="first" type="radio" name="tab" checked="checked" />
+            <input id="second" type="radio" name="tab" />
+            <section class="buttons">
+                <label for="first" >HTML5</label>
+                <label for="second">CSS3</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>HTML5 Canvas</strong>
+                            <p>2021-03-08</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>HTML5 Audio</strong>
+                            <p>2021-03-08</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>HTML5 Video</strong>
+                            <p>2021-03-08</p>
+                        </div>
+                </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>HTML5 Semantic Web</strong>
+                            <p>2021-03-08</p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>CSS3 Transition</strong>
+                            <p>2021-03-08</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>CSS3 Animation</strong>
+                            <p>2021-03-08</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>CSS3 Boder</strong>
+                            <p>2021-03-08</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>CSS3 Box</strong>
+                            <p>2021-03-08</p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <nav id="aside_nav">
+                <ul>
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">Node.js</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <footer id="main_footer">
+        <h3>HTML5 + CSS3</h3>
+        <address>Website Layout Basic</address>
+    </footer>
+</body>
+</html>
