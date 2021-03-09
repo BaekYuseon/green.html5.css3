@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0;}
+        body { 
+            font-family: 'Helvetica', sans-serif;
+            min-width: 760px;
+        }
+        li { list-style: none;}
+        a {text-decoration: none;}
+    </style>
+    <!-- 헤더 -->
+    <style>
+        #main_header {
+            height: 60px;
+            line-height: 60px;
+            padding-left: 10px;
+            border-bottom: 1px solid black;
+
+            background: #1d4088;
+            color: white;
+        }
+    </style>
+    <!-- 내비게이션 -->
+    <style>
+        #main_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: #32394A;
+        }
+
+        #main_gnb > ul.left {
+            overflow: hidden;
+            float: left;
+        }
+
+        #main_gnb > ul.right {
+            overflow: hidden;
+            float: right;
+        }
+
+        #main_gnb > ul.left > li { float: left; }
+        #main_gnb > ul.right > li { float: right; }
+
+        #main_gnb a {
+            display: block;
+            padding: 10px 20px;
+            border-left: 1px solid #5f6673;
+            border-right: 1px solid #242a37;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <!-- 콘텐츠 -->
+    <style>
+        #wrap {overflow: hidden;}
+        #wrap > #main_lnb {
+            float: left;
+            width: 200px;
+        } 
+        #wrap > #content_wrap {
+            float: left;
+            width: 100%;
+            margin-right: -200px;
+        }
+        #wrap > #content_wrap > #content { padding-right: 200px;}
+    </style>
+    <!-- 수직 목록 -->
+    <style>
+        #wrap { background: #71b1d1; }
+        #main_lnb > ul > li > a {
+            display: block;
+            height: 40px; line-height: 40px;
+            padding-left: 15px;
+
+            border-top: 1px solid #96d6f6;
+            border-bottom: 1px solid #6298b2;
+            color: white;
+            font-weight: bold;
+            /* background: #71b1d1; */
+        }
+    </style>
+    <!-- 본문 -->
+    <style>
+        #content {
+            background: white;
+            border-left: 1px solid black;
+        }
+        article {
+            padding: 10px;
+        }
+    </style>
+    <!-- 푸터 -->
+    <style>
+        #main_footer {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <h1>Fluid</h1>
+    </header>
+    <nav id="main_gnb">
+        <ul class="left">
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+        </ul>
+    </nav>
+    <div id="wrap">
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+            </ul>
+        </nav>
+        <div id="content_wrap">
+            <div id="content">
+                <article>
+                    <h1>Lorem ipsum sit amet.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque reiciendis eum est, nihil consectetur repellat amet voluptatem cum distinctio corrupti nostrum officia ex explicabo quaerat sint corporis dolorem ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia consequatur eveniet omnis impedit tempora nemo? Voluptas ab error itaque minima, consequuntur animi iusto nostrum libero praesentium cum laudantium nulla ex!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque explicabo architecto illum, temporibus sapiente aliquam earum fugiat repellendus quis error vero voluptatibus! Aliquam porro nam minus ab necessitatibus facilis accusantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium a inventore laborum, consequuntur itaque, dicta voluptas quam iure dignissimos provident impedit nulla sed tenetur atque vel enim, eveniet fugiat excepturi?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda dignissimos nobis nam ullam laboriosam enim, sequi at explicabo perspiciatis odit fuga sit nostrum vitae. Magnam officia reprehenderit architecto iusto explicabo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facilis suscipit unde accusamus consequatur iste deleniti nisi dolorem veritatis ipsa obcaecati eos earum culpa odit in quaerat, facere ab quos!</p>
+                </article>
+                <article>
+                    <h1>Lorem ipsum sit amet.</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio neque sed beatae vitae, blanditiis minus quis provident. Ipsa inventore quae, amet sapiente voluptatem harum assumenda magnam deleniti, ducimus molestiae laboriosam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque illo possimus similique. Consectetur qui animi a, commodi dolor iusto magnam, esse autem, obcaecati enim facere nostrum placeat alias inventore eius.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, aspernatur ullam! Numquam voluptas nobis illo in magnam assumenda veritatis debitis! Quibusdam architecto quia assumenda cupiditate reiciendis alias nisi adipisci incidunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, debitis est magni nostrum consequuntur cupiditate. Dolor, exercitationem? Dignissimos repellendus ullam pariatur deserunt dolorum rem dolore. Voluptatem assumenda dolor earum sint?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil omnis, sequi eum dicta fuga doloremque id, quaerat mollitia magni, cum culpa assumenda pariatur? Labore voluptatibus repellat ex, debitis iure nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quas dolore culpa earum magnam, molestiae aliquam eveniet aperiam voluptas, laudantium maiores possimus. Ratione dolore fuga, suscipit quis ullam animi! Incidunt.</p>
+                </article>
+                <article>
+                    <h1>Lorem ipsum sit amet.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ab quod qui quibusdam. Eaque molestiae soluta debitis quaerat velit assumenda! Cum laudantium temporibus, adipisci quasi iure nobis sed corrupti doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum excepturi atque, ipsam dignissimos ratione possimus quidem nostrum veritatis necessitatibus ab? Nemo distinctio saepe nisi reprehenderit mollitia. Dolor veniam assumenda iusto?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo corrupti quia deleniti? Quia, ea facere corrupti molestias nostrum, cumque in neque impedit autem ipsa obcaecati similique voluptatum vitae necessitatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque eaque ipsam hic voluptate, pariatur nam consequuntur ipsa obcaecati veritatis necessitatibus repellat eum aliquam provident placeat omnis vel veniam similique.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nihil sapiente amet necessitatibus blanditiis culpa laudantium voluptatum. Provident placeat modi nulla sit magnam. Maiores laboriosam, doloremque fugit possimus quo architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sit necessitatibus eveniet voluptatibus facilis odio corporis eum alias, natus quo minima fugiat facere? Nulla quas dolorum similique corrupti quod cumque.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer id="main_footer">
+        <h3>HTML5 + CSS3 Basic</h3>
+        <address>Website Layout Basic</address>
+    </footer>
+</body>
+</html>
