@@ -134,59 +134,118 @@ body { position: relative; }
     width: 192px;
 }
 
-li{
-    height: 13px;
-    margin-top: 5px;
-    padding: 3px 5px;
+/* li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+li.header {
+    padding-left: 15px;
+    line-height: 30px;
+}
+
+li.header > p {
+    font-weight: bold;
+    color: #48c5ff;
+    line-height: 25px;
+}
+
+ul.column_1 {
     color: white;
+    margin-top: 5px;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    width: 156px;
 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-li.header {
-    padding-left: 15px;
-}
-
-li.header > p {
-    font-weight: bold;
-    color: #48c5ff;
-}
-
-/* ul.column_1 {
-    color: white;
-    margin-top: 5px;
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
 ul.column_2 {
-    background-color: navy;
     color: white;
     margin-top: 5px;
     float: left;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    width: 156px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 ul.column_3 {
-    background-color: navy;
     color: white;
     margin-top: 5px;
     float: left;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    width: 156px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 ul.column_4 {
-    background-color: navy;
     color: white;
     margin-top: 5px;
     float: left;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    width: 156px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 ul.column_5 {
-    background-color: navy;
     color: white;
     margin-top: 5px;
     float: left;
-} */
+    /* margin-right: 20px; */
+    margin-bottom: 10px;
+    width: 156px;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+#content {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.sub_article {
+    padding-top:10px;
+    padding-right: 7.5px ;
+    padding-left: 3px;
+    float: left;
+    width: 795px;
+}
+
+/* #content > .sub_article > img { display: block; } */
+
+#sub_aside {
+    padding-top: 10px;
+    width: 170px;
+    float: left;
+}
+
+#footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: gray;
+    height: 100px;
+}
+
+#footer .h1 {
+    line-height: 60px;
+    font-size: 30px;
+}
