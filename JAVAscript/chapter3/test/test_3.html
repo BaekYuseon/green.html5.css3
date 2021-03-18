@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var grade4 = 4;
+        var score4 = 70;
+        var score = 60;
+
+        var grade_num = prompt("학년을 입력하시오.", "");
+        if(grade_num == grade4) {
+            var score_num = prompt("점수를 입력하시오.", "");
+            if(score_num >= score4) {
+                document.write("합격");
+            } else if(score_num < 0 && score_num > 100) {
+                alert("에러입니다.")
+            } else {
+                document.write("불합격");
+            }
+        } else {
+        if(grade_num <= grade4) {
+            var score_num = prompt("점수를 입력하시오.", "");
+            if(score_num >= score) {
+                document.write("합격");3
+            } else {
+                document.write("불합격");
+            }
+        } 
+        }
+    </script>
+</body>
+</html>
