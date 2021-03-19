@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 중요 : 초기값을 반드시 줘야한다. 안주면  UNDEFINED 된 상태라 에러 null 넣어도됨
+        var num = 0;
+
+        for(var i = 0; i < 10; i++) {
+            num += i;
+        }
+        // num =0 이고 num+i= 0+1 (반복)
+        // 컴퓨터에서 같다는 == 따라서 =를 같다라는 의미로 생각하면 안됨.
+        document.write(num);
+    </script>
+</body>
+</html>

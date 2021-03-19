@@ -8,7 +8,20 @@
 </head>
 <body>
     <script>
+        var height = prompt("키를 입력하세요", "0");
+        var str = "좋은시간 보내세요";
         
+
+        if(height >= 150) {
+            document.write(str);
+        } else if(height < 150) { 
+            var result = confirm("부모님과 함께 왔습니까?");
+            if(result) {
+                document.write(str);
+            } else {
+                document.write("어른 모시고 다시 오렴~")
+            }
+        }
     </script>
 </body>
 </html>
