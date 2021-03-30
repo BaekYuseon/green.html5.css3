@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr;  px는 고정값이므로 반응형을 위해 fr(비율)사용 */
+            grid-template-columns: repeat(3, 1fr); /* 3가지를 같은 비율로 사용할때 사용 */
+            /* grid-template-rows: minmax(100px auto); overflow 현상 방지 minmax(최대값, 최소값) */
+        }
+
+        .items {
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        .items:nth-child(odd){
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium iste quidem, repellendus quas tempora sapiente quae ipsum necessitatibus aut similique inventore? Dignissimos aliquid quibusdam officiis corporis sapiente fugit adipisci accusamus.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magni incidunt eveniet obcaecati deleniti, et dolorem ad illo error ex aspernatur, perspiciatis modi doloremque numquam veniam. Suscipit incidunt vitae quidem!</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem animi ratione dolorum maiores facilis atque ex rerum? Error architecto debitis rem, tempore blanditiis ea aperiam eligendi doloremque soluta exercitationem nobis.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, tempore. Est omnis laboriosam quos sequi necessitatibus perspiciatis iure laudantium quis, molestiae earum corrupti ducimus veritatis hic sapiente quidem quae quaerat.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex architecto et illum laborum nesciunt, maiores magnam impedit reiciendis nam dolor facilis quasi aspernatur officia atque earum aperiam adipisci dolores ratione!</div>
+    </div>
+</body>
+</html>
