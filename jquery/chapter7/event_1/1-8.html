@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            $(document).on("mousemove",function(e){
+                $(".postX").text(e.pageX);
+            $(".postY").text(e.pageY);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>mousemove</h1>
+    <p>X : <span class="postX">0</span>px</p>
+    <p>Y : <span class="postY">0</span>px</p>
+</body>
+</html>
