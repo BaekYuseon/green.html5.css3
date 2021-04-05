@@ -57,8 +57,26 @@
         });
 
         $(window).resize(function(){//resize : 크기가 바뀔때 실행되는 이벤트
-            $(".container").width($(window).width())
-        }); 
+            $(".container").width($(window).width()).height($(window).height());
+            $(".content").each(function(){
+                $(this).css("margin-left",($(this).width()/2*-1) + "px")
+                        .css("margin-top",($(this).height()/2*-1) + "px");
+            });
+        });
+        
+        setTimeout(function(){
+            $(window).resize()
+        }, 1000);
+
+        $(".bg-holder").parallaxScroll({ //parallaxScroll은 배경과 콘텐츠의 시간차를 주는것
+            friction: 0.3
+        });
+
+        $(".icon img").hover(function(){
+            $(this).attr("src", $(this).attr("src").replace(".png", "_over.png"));
+        }, function(){
+            $(this).attr("src", $(this).attr("src").replace("_over.ong", ".png"));
+        });
     });
 </script>
 </body>
