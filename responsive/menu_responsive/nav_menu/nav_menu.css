@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:link, a:hover, a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 plum;
+}
+
+nav { /* 반응형이기 때문에 너비와 높이를 이렇게 지정 */
+    width: 100%;
+    height: auto;
+    background: palevioletred;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul {
+    display: none;
+    height: auto;
+}
+
+nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid pink;
+}
+
+nav ul li a {
+    line-height: 50px;
+}
+
+nav ul li a:hover{
+    color: orange;
+}
+
+nav a#trigger {
+    display: block;
+    background: #283744;
+    width: 100%;
+    padding-left: 15px;
+    line-height: 40px;
+    position: relative;
+}
+
+nav a#trigger:hover {
+    color: red;
+}
+
+nav a#trigger::after {
+    content: "";
+    background: url("nav.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute; /* 부모태그가  position: relative;인지 꼭 확인*/
+    right: 15px;
+    top: 10px;
+}
+/* min-width : 최소 ~부터 보여주겠다. max-width : 최대 ~까지 보여주겠다. */
+
+@media screen and (min-width:721px) { /* 주의! @media는 위나 중간에 넣으면 안됌. 꼭 맨 아래 넣어줄것 */
+    nav {
+        height: 40px;
+        border-bottom: 2px solid #34495e;
+    }
+
+    nav ul {
+        display: block;
+        width: 720px;
+        height: 40px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        width: 120px;
+        border-bottom: 0;
+        border-right: 1px solid #576979;
+        margin-right: -6px;
+    }
+
+    nav ul li:last-child {
+        border-right: 0;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        line-height: 40px;
+    }
+
+    nav a#trigger {
+        display: none;
+    }
+}
