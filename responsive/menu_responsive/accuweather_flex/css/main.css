@@ -28,23 +28,21 @@ ul { list-style: none; }
     width: 100%;
 }
 
-#main_header .gnb { /* media와 상관없이 계속 고정되는 값은 media밖인 위에다 쓰기 */
-    overflow: hidden;
+#main_header .gnb {
     margin: 0 auto;
     padding-top: 10px;
+    display: flex;
 }
 
 #main_header .logo {
-    float: left;
-    width: 190px;
+    flex: 1;
 }
 
 #main_header ul {
-    float: left;
     overflow: hidden;
     padding-top: 10px;
     padding-left: 10px;
-    width: calc(100% - 217px); /* calc 잘 기억해두기!!! */
+    flex: 2;
 }
 
 #main_header ul > li {
@@ -53,18 +51,17 @@ ul { list-style: none; }
 }
 
 #main_header .setting {
-    float: right;
-    width: 17px;
     text-align: right;
     padding-top: 12px;
+    flex: 1;
 }
 
 #main_header .trigger {
-    float: right;
     width: 23px;
     text-align: right;
     padding-top: 4px;
     display: none;
+    flex: 1;
 }
 
 /* content */
