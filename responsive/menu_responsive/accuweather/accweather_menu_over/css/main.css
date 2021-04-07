@@ -54,6 +54,17 @@ ul { list-style: none; }
 
 .menu1 {
     display: none;
+    margin-top: 50px;
+}
+
+.radar_nav {
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+}
+
+.radar_main {
+    float: left;
 }
 
 #main_header .setting {

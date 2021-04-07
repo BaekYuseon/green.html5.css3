@@ -1,6 +1,9 @@
 $(function(){
     $(".radar").on("mouseover", function(){
-        $(".menu1").slideDown();
+        $(".menu1").css({"display":"block"});
     });
-    $(".radar").on("mouseout", function(){})
+
+    $(".menu1").on("mouseout", function(){
+        $(".menu1").css({"display":"none"});
+    });
 });
