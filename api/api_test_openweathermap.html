@@ -20,10 +20,18 @@
 
             $.ajax({
                 type:"GET",
-                url: url,
+                url:url,
                 dataType:"json",
                 success:function(data) {
-                    
+                    console.log("data: " + data);
+                    console.log(JSON.stringify(data)); //stringify->JSON을 텍스트 형태로 변환
+                    console.log("현재온도: " + data.main.temp);
+                    console.log("현재풍속: " + data.wind.speed + "m/s");
+                },
+                error:function(request,status,error) { //에러떴을때를 대비하여
+                    console.log("code:" + request.status);
+                    console.log("message:" + request.responseText);
+                    console.log("error:" + error);
                 }
             });
         });
