@@ -15,9 +15,6 @@
                 <div class="logo">
                     <a href="#"><img src="img/logo.svg" alt="로고"></a>
                 </div>
-                <div class="trigger">
-                    <a href="#"><i class="fas fa-lg fa-bars"></i></a>
-                </div>
                 <ul class="nav">
                     <li><a href="#">레이더 및 지도</a></li>
                     <li><a href="#">동영상</a></li>
@@ -28,8 +25,8 @@
                     <a href="#"><i class="fas fa-lg fa-cog"></i></a> <!-- fontawesome 사이즈변경 : class명에서 fas뒤에 fa-lg or fa-2x, fa-3x 입력 -->
                 </div>
                 <div class="trigger">
-                    <div class="mobile hamburger"></div>
-
+                    <a href="#" class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></a>
+                    <a href="#" class="mobile close"><i class="fas fa-times fa-lg"></i></a>
                 </div>
             </div>
         </div>
@@ -62,7 +59,7 @@
         <!-- 모바일 메뉴 리스트 -->
     </div>
     <footer id="main_footer">
-
+        하단
     </footer>
 <!-- 함수의 호이스트가 안되는 경우도 있으므로 js 파일은 순서가 중요하다. -->
 <script src="js/jquery-3.6.0.min.js"></script>
