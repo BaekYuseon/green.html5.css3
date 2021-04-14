@@ -1,0 +1,213 @@
+@charset "UFT-8"; /* 배포시 필수 */
+
+/* 초기화 */
+* {
+    margin: 0; padding: 0;
+    font: normal 13px 'Arial';
+}
+a { text-decoration: none !important; }
+img { border: 0; }
+ul { list-style: none; }
+
+/* header */
+
+#main_header {
+    background: gray;
+    color: white;
+    height: 390px;
+}
+
+#main_header a {
+    color: white;
+}
+
+#main_header > .gnb_container {
+    background: black;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+}
+
+#main_header .gnb { /* media와 상관없이 계속 고정되는 값은 media밖인 위에다 쓰기 */
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    /* padding-top: 10px; */
+}
+
+#main_header .logo {
+    float: left;
+    width: 190px;
+}
+
+#main_header ul {
+    float: left;
+    overflow: hidden;
+    /* padding-top: 10px; */
+    padding-left: 10px;
+    width: calc(100% - 217px); /* calc 잘 기억해두기!!! */
+}
+
+#main_header ul > li {
+    float: left;
+    /* margin-right: 1rem; */
+    padding: 22px 17px;
+}
+
+#main_header ul > li:nth-child(4), li:nth-child(5) {
+    display: none;
+}
+
+#main_header .setting {
+    float: right;
+    width: 17px;
+    text-align: right;
+    padding-top: 12px;
+}
+
+#main_header .trigger {
+    float: right;
+    width: 23px;
+    text-align: right;
+    padding-top: 4px;
+    display: none;
+}
+
+#main_header .trigger .close {
+    display: none;
+}
+
+/* active_path, active_bar */
+
+#main_header > .active_path {
+    position: fixed;
+    width: 100%;
+    height: 1px;
+    background: #D8D8D8;
+    top: 60px;
+}
+
+#main_header > .active_path > .active_bar {
+    width: 81px;
+    height: 1px;
+    margin: 0;
+    background: tomato;
+    display: none;
+}
+
+/* 하위 메뉴 애니메이션 */
+
+#main_header > .lnb_container {
+    display: none;
+    background: black;
+    height: 330px;
+    width: 100%;
+    position: fixed;
+    top: 61px;
+}
+
+#main_header > .lnb_container > .lnb {
+    overflow: hidden;
+    margin: 0 auto;
+    display: none;
+}
+
+#main_header > .lnb_container > .lnb > div {
+    float: left;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.appear /* 애니메이션 효과 */{
+    animation: fade-in 0.5s;
+}
+
+.disappear /* 애니메이션 효과 */{
+    animation: fade-out 0.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* content */
+
+#main_content {
+    background: #D8D8D8;
+}
+
+/* 푸터 */
+
+#main_footer {
+    background: white;
+    height: 150px;
+}
+
+/* 모바일 메뉴 */
+
+#mobile_menu {
+    display: none;
+    background: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;   /* vw, vh를 사용시 스크롤이 생기므로 overflow hidden과 fixed를 사용하여 방지 */
+    overflow: hidden;
+    position: fixed;
+    top: 61px;
+}
+
+#mobile_menu a {
+    color: white;
+}
+
+/* 미디어 쿼리 */
+
+@media screen and (max-width: 767px) {
+    #main_header .gnb, .lnb {
+        width: 90vw;
+    }
+
+    #main_header ul {
+        display: none;
+    }
+
+    #main_header .setting {
+        display: none;
+    }
+
+    #main_header .trigger {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #main_header .gnb, .lnb {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #main_header .gnb, .lnb {
+        width: 960px;
+    }
+}
