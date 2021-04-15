@@ -26,6 +26,7 @@ ul { list-style: none; }
     height: 60px;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 #main_header .gnb { /* media와 상관없이 계속 고정되는 값은 media밖인 위에다 쓰기 */
@@ -85,6 +86,7 @@ ul { list-style: none; }
     height: 1px;
     background: #D8D8D8;
     top: 60px;
+    z-index: 1;
 }
 
 #main_header > .active_path > .active_bar {
@@ -104,6 +106,7 @@ ul { list-style: none; }
     width: 100%;
     position: fixed;
     top: 61px;
+    z-index: 1;
 }
 
 #main_header > .lnb_container > .lnb {

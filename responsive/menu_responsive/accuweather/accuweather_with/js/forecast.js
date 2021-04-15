@@ -5,9 +5,9 @@ function Forecast() {
 /* 현재 날씨 얻어오기 */
 
 Forecast.prototype.getCurrentWeather = function(city) {
-    var dataObj = "data";
+    var dataObj;
     var url = "http://api.openweathermap.org/data/2.5/weather";
-        url += "?q=" + "city";
+        url += "?q=" + city;
         url += "&units=" + "metric";
         url += "&lang=" + "kr";
         url += "&APPID=" + "d3737381ef6ababa2bd02c9677d79367"; //본인의 API key
@@ -33,8 +33,8 @@ Forecast.prototype.getCurrentWeather = function(city) {
 
 /* 내일 날씨 얻어오기 */
 
-// Forecast.prototype.getTomarrowWeather = function() {
-//     //...
-// }
+Forecast.prototype.getTomarrowWeather = function() {
+    //...
+}
 
 /* Forecast.prototype.함수명 = function() */
