@@ -41,13 +41,13 @@
 
 /* 메인 날씨(기상 상태) */
 
-#main_content > #main_container > section > #weather_loacation {
+#main_content > #main_container > section > #weather_location {
     height: 400px;
     margin-bottom: 20px;
     background: #D8D8D8
 }
 
-#main_content > #main_container > section > #weather_loacation a {
+#main_content > #main_container > section > #weather_location a {
     display: inline-block;
     width: calc(50% - 8px);  /* 각각의 a태그에 좌우로 2px씩 margin값이 있기 때문에 8px를 빼준다 */
     height: 51px;
@@ -55,24 +55,24 @@
     margin: 2px;
 }
 
-#main_content > #main_container > section > #weather_loacation a span {
+#main_content > #main_container > section > #weather_location a span {
     display: inline-block;
     font-size: 18px;
 }
 
-#main_content > #main_container > section > #weather_loacation a span:nth-child(1) {
+#main_content > #main_container > section > #weather_location a span:nth-child(1) {
     width: 60%;
 }
 
-#main_content > #main_container > section > #weather_loacation a span:nth-child(2) {
+#main_content > #main_container > section > #weather_location a span:nth-child(2) {
     width: 20%;
 }
 
-#main_content > #main_container > section > #weather_loacation a span:nth-child(3) {
+#main_content > #main_container > section > #weather_location a span:nth-child(3) {
     width: 15%;
 }
 
-#main_content > #main_container > section > #weather_loacation a img {
+#main_content > #main_container > section > #weather_location a img {
     width: 30px;
     height: 30px;
 }
@@ -107,7 +107,7 @@
         width: 100%;
     }
 
-    #main_content > #main_container > section > #weather_loacation a {
+    #main_content > #main_container > section > #weather_location a {
         width: 100%;
     }
     
